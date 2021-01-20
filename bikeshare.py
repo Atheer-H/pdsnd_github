@@ -147,7 +147,7 @@ def load_data(city, month, day):
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
-    print('\nCalculating The Most Frequent Times of Travel...\n')
+    print('\n Calculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
     # value counts return a series containing counts of unique values
@@ -180,7 +180,7 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     mc_start_station = df['Start Station'].value_counts().idxmax()
-    print(f"Most common start-station is: {mc_start_station}.")
+    print(f"Most common start-station is : {mc_start_station}.")
 
     # TO DO: display most commonly used end station
     mc_end_station = df['End Station'].value_counts().idxmax()
@@ -267,7 +267,7 @@ def main():
         current_index = 0
         # keep asking user if he want to display rows until he say no
         while True:
-            print_data = input("Would you like to print 5 rows of data? (y,n): ")
+            print_data = input("Would you like to print 5 rows of data? type y for yes ,n for no ): ")
             if print_data.lower() not in ['y', 'n']:
                 print("\n\nPlease enter a valid choice, y or n.\n\n")
             if print_data.lower() == 'y':
