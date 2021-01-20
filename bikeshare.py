@@ -271,10 +271,10 @@ def main():
         current_index = 0
         # keep asking user if he want to display rows until he say no
         while True:
-            print_data = input("Would you like to print 5 rows of data? (y,n): ")
-            if print_data.lower() not in ['y', 'n']:
+            print_data = input("Would you like to print 5 rows of data? (y,n): ").lower()
+            if print_data not in ['y', 'n']:
                 print("\n\nPlease enter a valid choice, y or n.\n\n")
-            if print_data.lower() == 'y':
+            if print_data == 'y':
                 # loop on rows from index current_index to current_index + 5
                 for (i, row) in df[current_index:current_index + 5].iterrows():
                     # loop on columns except the Unnamed: 0 column
