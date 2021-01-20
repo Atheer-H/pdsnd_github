@@ -67,7 +67,7 @@ def get_filters():
             print("Invalid city name, please try again. \n\n")
 
 
-    
+
     # TO DO: get user input for month (all, january, february, ... , june)
     # check if user wants to filter by month , if not, set default value to 'all'
     while filter_by_month_or_day.lower() not in ['month', 'day', 'no']:
@@ -220,7 +220,7 @@ def user_stats(df):
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
-    
+
     # TO DO: Display counts of user types
     counts_of_user_type = df['User Type'].value_counts()
     for user_type, count in zip(counts_of_user_type.index, counts_of_user_type):
@@ -283,7 +283,7 @@ def main():
             elif print_data.lower() == 'n':
                 break
 
-        restart = input('\nWould you like to restart? Enter yes or no: ')
+        restart = input('\n Would you like to restart the process again? Enter yes or no: ')
         if restart.lower() != 'yes':
             break
 
