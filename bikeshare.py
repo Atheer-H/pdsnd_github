@@ -242,9 +242,10 @@ def user_stats(df):
     # recent = newest = maximum , ex: 2010 is newset than 1995
 
     if("Birth Year" in df.columns):
-        mc_birth_year = df['Birth Year'].value_counts().idxmax()
+
         recent_birth_year = df['Birth Year'].max()
         earliest_birth_year = df['Birth Year'].min()
+        mc_birth_year = df['Birth Year'].value_counts().idxmax()
         # display them
         print(f"The earliest birth year is: {earliest_birth_year}")
         print(f"The recent birth year is: {recent_birth_year}")
